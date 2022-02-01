@@ -1,0 +1,11 @@
+[Unit]
+Description=WAS Service to start the ExecSuite.py
+
+[Service]
+Restart=always
+User=root
+WorkingDirectory=/home/virsec/
+ExecStart=/usr/bin/python3 /home/virsec/was/execSuite.py > /home/virsec/was/service/service.log
+
+[Install]
+WantedBy=multi-user.target
