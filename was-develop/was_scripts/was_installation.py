@@ -11,7 +11,7 @@ def stop_was():
     ui_version = subprocess.check_output(version_check, shell=True)
     
     if (len(ui_version) != 0):
-        cmd = "sudo docker stop " + str(ui_version.decode("utf-8"))
+        cmd = "sudo docker1 stop " + str(ui_version.decode("utf-8"))
         os.system(cmd)
         print("WAS UI has stopped")
         remove_docker = "sudo docker rm --force "+ str(ui_version.decode("utf-8"))
